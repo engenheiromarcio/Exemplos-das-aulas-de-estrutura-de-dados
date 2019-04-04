@@ -1,0 +1,44 @@
+//Exemplo 8 , PDF da aula 2 (funções) Odenação de vetores por referÊncia, 
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+	
+	int troca (int *a, int *b){
+
+int x;
+if (*a>*b)
+{
+x = *a;
+*a=*b;
+*b=x;
+}
+return (0);}
+
+		main(){
+			
+setlocale(LC_ALL, "Portuguese");
+
+int vet[9], i,j;
+
+printf("\n\t\tOrdenacao de vetor\n\n");
+
+for (i=1;i<=9;i++)
+{
+printf("Digite o valor para a %dª posição do vetor: ",i);
+scanf("%d",&vet[i]);
+}
+
+for (i=1;i<=9;i++){
+
+	for (j=i; j<=9; j++){
+	
+troca(&vet[i],&vet[j]);}}
+
+for (i=1;i<=9;i++)
+printf("\n %dª = elemento: %d",i,vet[i]);
+
+putchar('\n');
+system("pause");
+
+return 0;
+}
