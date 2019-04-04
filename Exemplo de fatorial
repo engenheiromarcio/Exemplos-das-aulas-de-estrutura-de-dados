@@ -1,0 +1,36 @@
+//Exemplo 2, PDF da aula 2 (funções) exemplo de passagem de parametro por valor. Calculo de fatorial
+#include<stdio.h>
+#include<stdlib.h>
+#include<locale.h>
+
+	int fatorial(int n){
+		
+		int i, fat = 1;
+		for (i=1; i<=n; i++){
+			fat = fat*i;
+		} 
+		if (n=0 ){
+			fat= 1; 
+		}
+		
+		return fat; 
+	}
+	
+main(){
+	
+	setlocale(LC_ALL, "Portuguese");
+	long int fat;
+	int valor;
+	
+	printf("Oi! Tudo bem?\nEste programa tem como função calcular o fatoral de um número\n ");
+	printf("Digite o número para que seu fatorial seja calculado->");
+	scanf("%d", &valor);
+	fflush(stdin);
+	putchar('\n');
+
+	fat = fatorial(valor);
+	printf("O fatorial de %d é %d", valor , fat);
+	putchar('\n');
+	
+	system("pause");															
+}
