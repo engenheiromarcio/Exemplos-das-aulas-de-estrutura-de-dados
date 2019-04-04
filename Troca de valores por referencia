@@ -1,0 +1,33 @@
+//Exemplo6 , PDF da aula 2 (funções) funçaõ para troca de valores com passagem de valores por referencia, 
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+
+	int troca (int *a, int *b)
+// Definição de ponteiros que receberão os valores
+{
+int x; // Variável auxiliar
+x = *a;
+*a=*b;
+*b=x;
+return (0);
+
+    
+}
+
+int main()
+{
+	setlocale(LC_ALL, "Portuguese");
+		printf("Oi! Tudo bem?\nEste programa tem como função Trocar os valores de duas variáveis por referencia\n ");
+   int x , y;
+   printf("Digite os dois números a serem permultados:\n");
+   
+   printf("x= ");
+   scanf("%d", &x);
+   printf("y= ");
+   scanf("%d", &y);
+   getchar();
+   troca(&x,&y);
+   printf("Depois da troca x=%d e y=%d \n",x,y);
+}
